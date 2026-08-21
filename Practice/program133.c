@@ -1,0 +1,63 @@
+//Take n numbers from user and check the whether that n no contains 11 or not 
+//here we Remove the flag and check the options to solve problem 
+//the last program is give more byte than the privious and its not good prgramming practice so here we use the logic of the icnt variable
+#include<stdio.h>
+#include<stdlib.h>
+#include<stdbool.h>
+
+bool LinearSearch(int Arr[],int iSize,int iNo)
+{
+    int iCnt = 0;
+
+    for(iCnt = 0; iCnt < iSize;iCnt++)
+    {
+    if(Arr[iCnt] == iNo)
+    {
+        
+        break;
+    } 
+}
+    if(iCnt == iSize)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+int main()
+{
+    int *Brr = NULL;
+    int iLength = 0, iCnt = 0,iValue = 0;
+    bool bRet = false;
+    
+    printf("Enter the Numbers of element : \n");
+    scanf("%d",&iLength);
+
+    Brr =(int*)malloc(sizeof(int)* iLength);   
+
+    printf("Enter the Elements: \n");
+
+    for(iCnt = 0;iCnt < iLength ;iCnt++)
+    {
+        scanf("%d",&Brr[iCnt]);
+    }
+
+    printf("Enter the element that you want to search : \n");
+    scanf("%d",&iValue);
+
+    bRet = LinearSearch(Brr,iLength,iValue);
+    if (bRet == true)
+    {
+       printf("Element is present\n");
+    }
+    else
+    {
+        printf("Element is not present\n");
+    }
+
+    free(Brr);
+
+    return 0;
+}
